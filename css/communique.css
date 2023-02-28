@@ -1,0 +1,252 @@
+@font-face {
+    font-family: 'Sen-Regular';
+    src: url('Sen-Regular.ttf') format('truetype');
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{ 
+    background-color: #f2fdff;
+    margin: auto;
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Sen-Regular';
+}
+.section_entiere{
+    display: flex;
+}
+/************************************************/
+/***************HEADER**************************/
+header{
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    justify-content: space-between;
+    background-color: rgb(0,2,30);
+    border-bottom: 4px solid white;
+    position: fixed;
+    z-index: 10;
+    transition: top 0.5s;
+    top: 0px;
+}
+header  h2{
+    color: white;
+}
+header  p {
+    display: none;
+    cursor: pointer;
+}
+header p img{
+    width: 38px; 
+}
+header .logout{
+    padding: 5px;
+    font-size: 16px;
+    background-color: white;
+    border-radius: 25px; 
+    color:rgb(0,2,30);
+    text-decoration: none; 
+}
+.bloc_gauche .logout_image{
+    display: none;
+}
+/*************************************************/
+.section_entiere{
+    margin-top: 50px;
+}
+/**********************BLOC GAUCHE****************/
+.bloc_gauche{
+    height: 100vh;
+    padding-top: 25px;
+    width: 270px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.486);
+    background-color: white;
+}
+.bloc_gauche .logout1{
+    position: absolute;
+    margin-top: 130px;
+    color: white;
+    margin-left: 25px;
+    text-decoration: none;
+    padding: 5px;
+    font-size: 16px;
+    background-color:rgb(0,2,30);
+    border-radius: 25px;
+    display: none;
+}
+aside .add{
+    display: none;
+}
+.bloc_gauche aside {
+    display: grid;
+    font-size: large;
+
+}
+.bloc_gauche aside a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    padding-left: 30px;
+    margin-top: 5px;
+
+}
+.bloc_gauche aside a:hover{
+    background-color:  #e3f3ff;
+}
+
+.bloc_gauche aside .communication{
+    
+    font-weight: bold;
+    padding: 10px;
+    padding-left: 30px;
+    background-color: #e3f3ff;
+}
+.bloc_gauche aside .dashboard{
+    font-weight: bold;
+    font-size: larger;
+    margin-bottom: 20px;
+}
+/*************************************************/
+/**********************BLOC DROITE****************/
+.bloc_droite{
+    width: 75%;
+    padding-top: 25px;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+.bloc_droite div{
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    background-color: #cde9ff;
+    box-shadow: 0px 2px 5px 2px rgba(187, 187, 187, 0.863);
+}
+.bloc_droite p{
+    padding-bottom: 7px;
+}
+.bloc_droite .titre{
+    
+    padding-bottom: 10px;
+}
+
+.bloc_droite div .lire_plus{
+    background-color: rgb(0,2,30);
+    border-radius: 5px;
+    padding: 2px;
+    width: 90px;
+    float: right;
+    text-align: center;
+    margin-top: -7px;
+    margin-right: 8px;
+    margin-bottom: 10px;
+    text-decoration: none;
+
+}
+.bloc_droite div .lire_plus a{
+    text-decoration: none;
+    color: white;
+    
+}
+.bloc_droite .recent{
+    margin-top: 10px;
+   
+}
+
+.s_bloc{
+    justify-content: space-between;
+    display: flex;
+    border-bottom: 2px solid  rgb(0, 153, 255);
+    padding-bottom: 8px;
+}
+aside .lien_ajout{
+    padding: 5px;
+    font-size: 16px;
+    background-color: rgb(0,2,30);
+    border-radius: 25px; 
+    color:white;
+    text-decoration: none;    
+}
+aside .add{
+    padding: 5px;
+        
+}
+
+.bloc_droite .blocs_comm{
+    width: 100%;
+    height: 500px;
+    margin-right: 100px; 
+    overflow: auto;
+}
+/*************************************************/
+/******************MEDIA QUERY********************/
+
+@media(max-width:813px){
+aside .lien_ajout{
+   display: none;
+}
+aside .add{
+    display: block;
+    
+}  
+}
+@media(max-width:685px){
+
+header .logout{
+    display: none;
+}
+.bloc_gauche .logout1{
+    display: grid;
+}
+.bloc_gauche .logout1{
+    display: inline;
+}
+header  p {
+    display: block;
+    
+}
+
+.bloc_gauche{
+    width: 230px;
+    position: absolute;
+    margin-left: -100%;
+    transition: all 0.8s ease;
+}
+.bloc_droite{
+    width: 100%;
+    padding-left: 35px;
+}
+.bloc_gauche.mobilemenu{
+    margin-left: 0;
+}    
+.bloc_droite .blocs_comm{
+    overflow: unset;
+}
+header{
+   justify-content: space-between;
+   
+}
+header h2{
+    position: relative;
+    left: 60%;
+   
+}
+header p{
+    position: absolute;
+    left: 0;
+}
+}
+@media(max-width:371px){
+header h2{
+    position: relative;
+    left: 50%;
+    
+} 
+ }
