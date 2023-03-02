@@ -9,11 +9,27 @@
 </head>
 <body>
     <header id="header">
+         <aside class="menu-elements">
+        <p><img src="images/menu.png" alt="Image menu" class="menu_image"></p>
+        <aside class="menu_sms">
+            <a href="#" class="dashboard">Dashboard</a>
+            <a href="#"class="communication">Communication</a>
+            <a href="#">Menu inactif</a>
+            <a href="#">Menu inactif</a>
+            <a href="#">Menu inactif</a>
+            <a href="#">Menu inactif</a>
+            <a href="#">Menu inactif</a>
+            <div>
+                <a style="color: white;" class="logout1" href="#">Se Déconnecter</a>
+            </div>
+            
+        </aside>
+         </aside>
+      
         <h2>SMS Zanner</h2>
-        <a class="logout" href="#">Se Déconnecter</a>  
-        <p><img src="images/menu.png" alt="Image menu" class="menu_image"></p> 
+        <a class="logout" href="#">Se Déconnecter</a>    
     </header>
-
+      
     <section class="section_entiere">
             <nav class="bloc_gauche">
                 <aside>
@@ -25,7 +41,7 @@
                     <a href="#">Menu inactif</a>
                     <a href="#">Menu inactif</a>
                 </aside>   
-                <a class="logout1" href="#">Se Déconnecter</a>
+             
             </nav>
 
             <div class="bloc_droite">
@@ -126,7 +142,7 @@
 </script>
         <script>
             const menusms = document.querySelector(".menu_image")
-            const blocnav = document.querySelector(".bloc_gauche")
+            const blocnav = document.querySelector(".menu_sms")
 
             menusms.addEventListener('click',()=>{
                 blocnav.classList.toggle('mobilemenu')
